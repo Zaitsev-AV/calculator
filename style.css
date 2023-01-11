@@ -1,0 +1,51 @@
+.calc {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    /*border: 1px solid #000;*/
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    font-family: Arial, serif;
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas:
+            "ac plus-minus percent division"
+            "seven eight ninr multi"
+            "four five six minus"
+            "one two three plus"
+            "zero zero dot equal";
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;/*Выравние текста в кнопке по центру, не выравнивается по высоте*/
+    line-height: 60px;/*Выравнивание текста в кнопка по высоте*/
+    font-size: 1.5rem;
+    cursor: pointer; /*Добавили изменение курсора с обычной стрелки на указатель*/
+    user-select: none; /*При большем количестве кликов курсор менялся обратно, это свойство помогает это исправить*/
+
+}
+
+.btn:hover { /*При наведение на кнопку*/
+    filter: brightness(135%); /*Изменение яркости кнопок*/
+}
+
+.btn:active { /*ПРи нажатии на кнопку*/
+    filter: brightness(80%); /*Изменение яркости кнопок*/
+}
+
+.btn.bg-grey {
+    background: #a6a6a6;
+}
+.btn.bg-orange {
+    background: #ff9501;
+}
