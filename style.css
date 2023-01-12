@@ -12,14 +12,31 @@
 
 }
 
+.calc-screen {
+    height: 125px;
+    padding: 10px;
+    display: grid; /* Спомощью грида перемещаем блок с цифрами в право*/
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 25px;
+}
+
+.calc-screen p {
+    text-align: right;
+    font-size: 5rem;
+    margin: 0;
+}
+
 .buttons {
-    display: grid;
-    grid-template-areas:
+    display: grid;/*Создали грид контейнер*/
+    grid-template-areas: /*Обозначилить шаблон сетки расположения кнопок указав их классы*/
             "ac plus-minus percent division"
             "seven eight ninr multi"
             "four five six minus"
             "one two three plus"
             "zero zero dot equal";
+    grid-gap: 7px; /*Задаем расстояние между кнопками*/
+    justify-items: center; /*Выравниваем кнопки внутри ячеек грида по центру*/
 }
 
 .btn {
@@ -33,6 +50,13 @@
     cursor: pointer; /*Добавили изменение курсора с обычной стрелки на указатель*/
     user-select: none; /*При большем количестве кликов курсор менялся обратно, это свойство помогает это исправить*/
 
+}
+
+.btn.zero {
+    grid-area: zero;/*Сдалали кнопку ноль широкую. гридам указали какие ячейки кнапка занимает
+    выше в buttons прописана она дважды*/
+    width: 100%;
+    border-radius: 34px;
 }
 
 .btn:hover { /*При наведение на кнопку*/
